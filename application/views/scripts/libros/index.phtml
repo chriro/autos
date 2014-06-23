@@ -1,0 +1,25 @@
+<h2>lista de libros <a href="/libros/nuevo"> Nuevo</a></h2>
+<table style="border: 1px solid grey">
+<tr>
+	<th>Nodigo</th>
+	<th>Nombre</th>
+	<th>Autor</th>
+	<th>Genero</th>
+	<th colspan="2">Operacion</th>
+</tr>
+<?php
+
+foreach ($this->lista as $key => $datos) {	?>
+<tr>
+	<td><?php echo $datos['lid']?></td>
+	<td><?php echo $datos['nombre']?></td>
+	<td><?php echo $datos['autor']?></td>
+	<td><?php echo $datos['genero']?></td>
+	<td><a href="/libros/modificar/lid/<?php echo $datos['lid']?>">Editar</a></td>
+	<td><a href="/libros/eliminar/lid/<?php echo $datos['lid']?>">Eliminar</a></td>
+</tr>
+<?php
+}
+?>
+</table>
+

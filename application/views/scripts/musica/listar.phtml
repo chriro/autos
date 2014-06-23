@@ -1,0 +1,31 @@
+<table class="table table-bordered span7">
+	<tr>
+		<td style="font-size:20px">
+			Lista de las musicas
+			<a href="/musica/nuevo" class="btn btn-success">nuevo</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table>
+				<th>Codigo</th>
+				<th>Nombre</th>
+				<th>Duracion</th>
+				<?php
+					foreach ($this->dato as $datos){
+				?>
+				<tr>
+					<td><?php echo $datos['mid']?></td>
+					<td><?php echo $datos['nom']?></td>
+					<td><?php echo $datos['dur']?></td>
+					<td><a href="/musica/modificar/mid/<?php echo $datos['mid']?>">Modificar</a></td>
+					<td><a href="/musica/eliminar/mid/<?php echo $datos['mid']?>">Eliminar</a></td>
+					<td></td>
+
+				</tr>
+				<?php }?>	
+			</table>
+		</td>
+	</tr>	
+
+</table>

@@ -1,0 +1,35 @@
+<table class="table table-bordered span7">
+	<tr>
+		<td style="font-size:20px">
+			Lista de Autos
+			<a href="/autos/nuevo" class="btn btn-success">nuevo</a>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table>
+				<th>Codigo</th>
+				<th>Nombre</th>
+				<th>Descripcion</th>
+				<th>Color</th>
+				<th>Pais Procedencia</th>
+				<?php
+					foreach ($this->dat as $data){
+				?>
+				<tr>
+					<td><?php echo $data['aid']?></td>
+					<td><?php echo $data['nombre']?></td>
+					<td><?php echo $data['descripcion']?></td>
+					<td><?php echo $data['color']?></td>
+					<td><?php echo $data['pais_proc']?></td>
+					<td><a href="/autos/modificar/id/<?php echo $data['aid']?>">Modificar</a></td>
+					<td><a href="/autos/eliminar/aid/<?php echo $data['aid']?>">Eliminar</a></td>
+					<td></td>
+
+				</tr>
+				<?php }?>	
+			</table>
+		</td>
+	</tr>	
+
+</table>

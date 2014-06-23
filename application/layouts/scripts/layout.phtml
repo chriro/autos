@@ -1,0 +1,21 @@
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headScript(); ?>   
+        <script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/jquery.functions.js"></script>	
+	<script type="text/javascript" src="/js/jquery.plugins.js"></script>
+    </head>
+    <body>
+        <!--[if IE]>
+            <div class="mensaje">
+                Estas utilizando una version obsoleta del navegador Internet Explorer el sitema no se vera
+                correctamente. Actualiza o descarga un nuevo navegador como este <a href="https://www.google.com/chrome?hl=es">Google Chrome</a>.
+            </div>                
+        <![endif]-->
+        <?php echo $this->layout()->content; ?>
+    </body>
+</html>
